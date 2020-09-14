@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}{% endblock title %}
+{% block content %}
+    {% if messages %}
+        {% for mess in messages %}
+            {{ mess }}
+        {% endfor %}
+    {% endif %}
+    <h2>Форма для регистрации</h2>
+    <form method="POST">
+        {#    обязятельный параметр при котором даные которые будут передаваться будут защищены#}
+        {% csrf_token %}
+        {#        далее вывожу форм тот который создал как обьект в views (form = UserCreationForm())#}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-outline-warning ">Зарегестрироваться</button>
+    </form>
+    <p>Уже зарегистрированы? <a href="{% url 'login' %}">Войти в личний кабинет</a></p>
+{% endblock content %}

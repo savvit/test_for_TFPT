@@ -1,0 +1,54 @@
+/* Footer */
+
+/*.blog-footer {*/
+/*    padding: 1rem 0;*/
+/*    text-align: center;*/
+/*    border-top: .05rem solid #e5e5e5;*/
+/*    background-color: #343841;*/
+/*    color: #C5C6C7;*/
+/*}*/
+
+body a {
+    color: black;
+    text-decoration: none;
+}
+
+body a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+
+/*#intro {*/
+/*    background: content-box radial-gradient(crimson, skyblue);*/
+/*}*/
+
+
+
+img {
+    height: 100%;
+}
+
+.card {
+    border: 2px solid black;
+}
+
+
+.scale {
+    display: inline-block; /* Строчно-блочный элемент */
+    overflow: hidden; /* Скрываем всё за контуром */
+}
+
+.scale img {
+    transition: 0.3s; /* Время эффекта */
+    display: block; /* Убираем небольшой отступ снизу */
+}
+
+.scale img:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб */
+}
+
+

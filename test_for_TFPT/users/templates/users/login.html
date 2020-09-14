@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}{% endblock title %}
+{% block content %}
+    <h2>Registration</h2>
+    <form method="POST">
+{#    обязятельный параметр при котором даные которые будут передаваться будут защищены#}
+    {% csrf_token %}
+{#        далее вывожу форм тот который создал как обьект в views (form = UserCreationForm())#}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-outline-warning ">Войти</button>
+    </form>
+
+{% endblock content %}
